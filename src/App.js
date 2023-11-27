@@ -1,10 +1,8 @@
 import { register } from "./firebase";
 import React, { useState } from "react";
-
+import { Toaster } from "react-hot-toast";
 
 function App() {
-  
-  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = async (e) => {
@@ -15,6 +13,7 @@ function App() {
 
   return (
     <div className="App">
+      <Toaster position="top-right" />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
